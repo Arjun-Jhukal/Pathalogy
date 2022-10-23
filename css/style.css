@@ -1,0 +1,1060 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Resetting Html element property as per our need */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+h1,
+h1,
+h3 {
+    /* font-size: 1.6rem; */
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+p,
+li {
+    font-size: 1.6rem;
+    /* margin-bottom: 0.2em; */
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+/* Utility classes for our program */
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lg-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.md-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+}
+
+.btn-primary {
+    background-color: #08024f;
+    color: white;
+    border-radius: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #08024f;
+}
+
+.btn-secondary {
+    color: #08024f;
+    border-radius: 1rem;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #08024f;
+}
+
+.text-light {
+    color: #f7f7f7;
+}
+
+.text-blue {
+    color: #08024f;
+}
+
+.p10 {
+    padding: 10rem 0;
+}
+
+.mr-10 {
+    margin-right: 1rem;
+}
+
+
+/* styling our Home page */
+
+
+/* top-bar styling */
+
+.top-bar {
+    background-color: #888;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.top-bar-menu {
+    /* padding: 1rem 0; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.top-bar-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    flex-wrap: wrap;
+}
+
+.mail-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-bar-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.open-close-time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.top-bar-right .appointment-btn .btn-primary {
+    animation-name: colorful;
+    animation-direction: normal;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: 5; */
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes colorful {
+    from {
+        background-color: #08024f;
+    }
+    to {
+        background-color: #1f117b;
+    }
+}
+
+
+/* main navbar styling starts here */
+
+.navbar {
+    background-color: #08024f;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-item a {
+    color: #fff;
+    /* font-size: 2rem; */
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.nav-item a:hover {
+    background-color: #fff;
+    color: #08024f;
+    border-radius: 1rem;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
+
+/* banner styling starts here */
+
+.banner {
+    height: 70vh;
+    background-image: linear-gradient(#00000053, #00000054), url(../images/service-\(3\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    /* z-index: -1; */
+}
+
+.banner-text {
+    text-align: left;
+    position: absolute;
+    /* z-index: 1; */
+    top: 5rem;
+    left: 10rem;
+    right: 10rem;
+    /* transform: translate(-50%, -50%); */
+}
+
+.banner-text h1 {
+    color: #fff;
+    text-shadow: 1px 1px 8px #08024f;
+    /* horizontal shadow , vetical shadow, blur radius , color/none/initial/inherit */
+}
+
+.banner-text h1 span {
+    color: #08024f;
+}
+
+.banner-text h1 span i {
+    font-size: 2rem;
+}
+
+.banner-text p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* breadcrum styling starts here */
+
+.breadcrum {
+    height: 60vh;
+    background: linear-gradient(#08024f96, #08024f96), url(../images/breadcrum.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.breadcrum-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* breadcrum styling Ends here */
+
+
+/* feature styling starts here */
+
+.key-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* height: 30rem; */
+    /* z-index: 1; */
+}
+
+.feature-wrapper {
+    padding: 2rem;
+}
+
+.feature {
+    /* border: 1px solid green; */
+    background-color: #f7f7f7;
+    text-align: center;
+    width: 30%;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 10px #eee;
+    position: relative;
+    top: -12rem;
+    transition: all 0.3s ease-in;
+}
+
+.feature i {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 5rem;
+    color: #08024f;
+    padding-top: 2rem;
+}
+
+.feature h2.md-heading {
+    color: #08024f;
+    margin: 2rem 0;
+}
+
+.feature h3 {
+    font-size: 2rem;
+    color: #08024f;
+    margin: 0;
+}
+
+.feature p {
+    color: #343131;
+}
+
+.feature .pricing {
+    margin-top: 1rem;
+    /* border: 1px solid #08024f; */
+}
+
+.feature .appointment-btn {
+    display: none;
+}
+
+.feature:hover {
+    background-color: #0AA1DD;
+    color: #fff;
+    /* transition: 1s; */
+}
+
+.feature:hover p {
+    color: #fff;
+}
+
+.feature:hover .pricing {
+    display: none;
+}
+
+.feature:hover .appointment-btn {
+    padding: 2rem 0 0 0;
+    display: inline-block;
+}
+
+.vehicle i {
+    /* color: red; */
+    position: relative;
+    z-index: 1;
+    animation-name: truck;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    /* animation-delay: 1s; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes truck {
+    from {
+        color: #08024f;
+        top: 0%;
+        left: 0%;
+    }
+    to {
+        /* color: green; */
+        /* top: 70%; */
+        left: 95%;
+    }
+}
+
+
+/* about us styling starts here */
+
+.home-about-us {
+    padding: 5rem 0 0 0;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.about-us .about-feature-image {
+    width: 49%;
+}
+
+.about-detail {
+    width: 49%;
+}
+
+.about-detail .about-header {
+    padding-bottom: 3rem;
+}
+
+.about-detail p {
+    margin-bottom: 2rem;
+}
+
+.about-header h1::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+    /* text-align: center; */
+}
+
+.about-header h1 {
+    margin: 0;
+}
+
+.about-header::after {
+    content: '';
+    border: 1px solid #08024f;
+    display: block;
+    width: 10%;
+    /* margin: 0 auto; */
+}
+
+.about-us .about-feature-image img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-right: 2rem solid #08024f;
+    border-bottom: 2rem solid #08024f;
+}
+
+
+/* about us styling ends here */
+
+
+/* aside section one styling starts here */
+
+.index-aside-left {
+    position: fixed;
+    top: 48%;
+    left: -1rem;
+    color: #08024f;
+    /* background-color: #08024f; */
+}
+
+.index-aside-left:hover {
+    cursor: pointer;
+}
+
+
+/* services section styling starts here */
+
+.our-services {
+    padding: 10rem 0 5rem;
+}
+
+.services-header {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.services-header::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.services-header h1::after {
+    content: '';
+    display: block;
+    width: 15%;
+    margin: 0 auto;
+    border: 1px solid #08024f;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #f7f7f7;
+    margin-bottom: 3rem;
+    width: 24%;
+    box-shadow: 1px 1px 5px #08024f;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.service img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.service .service-details {
+    padding: 1rem;
+}
+
+.service .service-content {
+    margin-bottom: 1.5rem;
+}
+
+.service .service-content h1 {
+    color: #fff;
+    background-color: #08024f;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.service .service-content p {
+    text-align: left;
+}
+
+.service hr {
+    margin-bottom: 1.5rem;
+    border: 1px dashed #ddd;
+}
+
+.service .service-btn {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.view-all-btn {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+
+/* services section styling Ends  here */
+
+
+/* doctors section styling starts here */
+
+.our-doctors {
+    padding: 5rem 0 10rem 0;
+}
+
+.doctors-header {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.doctors-header::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.doctors-header h1 {
+    margin: 0;
+}
+
+.doctors-header::after {
+    content: '';
+    border: 1px solid #08024f;
+    display: block;
+    width: 12%;
+    margin: 0 auto;
+}
+
+.doctors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.doctor {
+    width: 24%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+.doctor img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.doctor-details {
+    background-color: #f7f7f7;
+    width: 90%;
+    border: 1px solid #f7f7f7;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    box-shadow: 1px 1px 5px #ddd;
+    position: absolute;
+    bottom: -5.5rem;
+    left: 1.2rem;
+}
+
+.doctor-icon {
+    position: absolute;
+    z-index: 1;
+    bottom: 5rem;
+    left: 44%;
+    /* transform: translate(50%); */
+    background-color: #08024f;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.doctor h1 {
+    margin: 0;
+}
+
+.doctors-bottom {
+    padding: 3rem 0 0 0;
+    text-align: center;
+}
+
+.our-doctors .pagination {
+    padding-bottom: 3rem;
+}
+
+
+/* doctors section styling Ends here */
+
+
+/* + wala section starts here */
+
+.quick-infos {
+    background: linear-gradient(rgba(8, 2, 79, 0.776), rgba(8, 2, 79, 0.776)), url(../images/slider-bg.jpg) fixed;
+    padding: 5rem 0;
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* .quick-info-header{
+
+} */
+
+.quick-info-header p {
+    display: inline-block;
+    background-color: #fff;
+    color: #08024f;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
+}
+
+.quick-info-header::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.quick-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.quick-info .info h1 {
+    margin: 0;
+}
+
+.quick-info .info h1::after {
+    content: '+';
+    font: 3.2rem;
+    padding: 0 1.5rem;
+}
+
+
+/* + wala section ends here */
+
+
+/* testimonials section starts here */
+
+.testimonials {
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.testimonial-header::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.testimonial-header h1::after {
+    content: '';
+    display: block;
+    border: 1px solid #08024f;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.testimonial-header i {
+    border: 1px solid #08024f;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial {
+    width: 33%;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.testimonial:hover {
+    border-bottom: 8px solid #08024f;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.testimonial p {
+    text-align: left;
+}
+
+.customer-info {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 0 0;
+}
+
+.testimonial .customer-info img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+    object-fit: cover;
+}
+
+
+/* testimonials section Ends here */
+
+
+/* blog Section styling starts here */
+
+.new-and-updates {
+    padding: 5rem 0 10rem 0;
+    text-align: center;
+}
+
+.blog-header {
+    text-align: center;
+}
+
+.blog-header h1 {
+    margin: 0;
+}
+
+.blog-header::after {
+    content: '';
+    display: block;
+    border: 1px solid #08024f;
+    width: 15%;
+    margin: 0 auto;
+}
+
+.blog-header::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.blogs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.blog img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.blog {
+    position: relative;
+    width: 32%;
+}
+
+.blog .blog-details {
+    margin-top: -0.5rem;
+}
+
+.blogs .blog .date {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    top: 3.3rem;
+    background-color: #08024f;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.blog .blog-details p::before {
+    content: 'Dr.';
+    display: inline;
+    /* padding: 0 0 0 0.3rem; */
+}
+
+.blog .blog-details h1.md-heading {
+    text-align: left;
+}
+
+
+/* .blog:hover .date {
+    border-bottom: 4px solid #08024f;
+    width: 100%;
+    transition: 0.2s;
+} */
+
+.blog:hover .blog-details,
+.blog:hover i,
+.blog:hover h1 {
+    background-color: #08024f;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem 0.5rem 1rem;
+}
+
+
+/* blog Section styling Ends here */
+
+
+/* Partners section styling starts here */
+
+.partners {
+    background: linear-gradient(rgba(255, 255, 255, 0.587), rgba(255, 255, 255, 0.507)), url(../images/slider-bg.jpg) fixed;
+    padding: 5rem 0;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sponsers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5rem 0;
+}
+
+.partners-heading::before {
+    content: '\1F6A8';
+    display: block;
+    color: red;
+}
+
+.partner {
+    width: 15%;
+}
+
+.partner img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.partners-heading h1::after {
+    content: '';
+    border: 1px solid #08024f;
+    display: block;
+    width: 12%;
+    margin: 0 auto;
+}
+
+
+/* .partners-heading h1 {
+    margin: 0;
+} */
+
+.pagination i {
+    color: #ddd;
+}
+
+.pagination a i.active {
+    color: #08024f;
+}
+
+
+/* partners section styling Ends here */
+
+
+/* aside section second styling starts here */
+
+.index-aside-right-bottom {
+    position: fixed;
+    bottom: 5%;
+    right: 3rem;
+    color: #fff;
+    padding: 1rem 1.4rem;
+    border-radius: 50%;
+    /* transition: 5sec; */
+}
+
+.index-aside-right-bottom {
+    background-color: #08024f;
+}
+
+
+/* Footer styling start here */
+
+footer {
+    background-color: #1f117b;
+    color: #E8F9FD;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem 0;
+}
+
+.footer1 {
+    width: 35%;
+}
+
+.footer {
+    width: 18%;
+}
+
+.footer-about {
+    margin-bottom: 2rem;
+}
+
+.footer1 .socials i {
+    margin-right: 0.5rem;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.phone i {
+    margin-right: 1.5rem;
+    border: 0.5px solid #888;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.phone a {
+    display: block;
+}
+
+.mails {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin: 1rem 0;
+}
+
+.mails i {
+    margin-right: 1.5rem;
+    border: 0.5px solid #888;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.address i {
+    margin-right: 1.5rem;
+    border: 0.5px solid #888;
+    padding: 1.2rem;
+    border-radius: 50%;
+}
+
+.newsletter {
+    text-align: center;
+    /* margin: 0 auto; */
+    padding: 0 0 5rem 0;
+}
+
+.newsletter input {
+    width: 25%;
+    padding: 1rem;
+    font: 2rem;
+    outline: none;
+}
+
+.newsletter button {
+    outline: none;
+    border-radius: 0;
+    border: none;
+    margin: 0 0 0 -4px;
+    padding: 12px 10px;
+}
+
+.newsletter button.btn-primary:hover {
+    background-color: #08024f;
+    cursor: pointer;
+    color: #fff;
+}
+
+.copyright {
+    background-color: #08024f;
+    padding: 1rem;
+}
+
+.copyright-content {
+    color: #E8F9FD;
+    display: flex;
+    justify-content: space-between;
+}
